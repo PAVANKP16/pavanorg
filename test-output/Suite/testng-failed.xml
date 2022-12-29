@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="TestLocal(failed)">
+    <parameter name="property" value="config.properties"/>
+    <classes>
+      <class name="script.Test1">
+        <methods>
+          <include name="openApp"/>
+          <include name="initReport"/>
+          <include name="closeApp"/>
+          <include name="testA"/>
+          <include name="publishReport"/>
+        </methods>
+      </class> <!-- script.Test1 -->
+    </classes>
+  </test> <!-- TestLocal(failed) -->
+  <test thread-count="5" parallel="tests" name="TestRemote(failed)">
+    <parameter name="property" value="qa.properties"/>
+    <classes>
+      <class name="script.Test1">
+        <methods>
+          <include name="openApp"/>
+          <include name="initReport"/>
+          <include name="closeApp"/>
+          <include name="testA"/>
+          <include name="publishReport"/>
+        </methods>
+      </class> <!-- script.Test1 -->
+    </classes>
+  </test> <!-- TestRemote(failed) -->
+</suite> <!-- Failed suite [Suite] -->

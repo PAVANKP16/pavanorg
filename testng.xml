@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+  <test name="TestLocal">
+  <parameter name="property" value="config.properties"/>
+    <packages>
+      <package name="script"/>
+    </packages>
+  <!-- </test>
+   <test name="TestRemote">
+  <parameter name="property" value="qa.properties"/>
+    <packages>
+      <package name="script"/>
+    </packages>-->
+  </test>  
+</suite>
